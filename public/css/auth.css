@@ -1,0 +1,14 @@
+.form-wrapper {
+    width: 90%;
+    max-width: 520px;
+    margin: 0 auto;
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+}
+
+.form-wrapper .card { padding: 2rem; }
+
+@media (max-width: 576px) {
+    .form-wrapper       { width: 96%; padding-top: 1.5rem; }
+    .form-wrapper .card { padding: 1.2rem; }
+}

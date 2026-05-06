@@ -1,0 +1,92 @@
+
+*, *::before, *::after { box-sizing: border-box; }
+
+body {
+    font-family: 'DM Sans', sans-serif;
+    background: #faf7f2;
+    margin: 0;
+    padding: 0;
+    color: #1a1a2e;
+}
+
+h1 { font-family: 'Playfair Display', serif; font-size: clamp(1.8rem, 5vw, 3rem); }
+h2 { font-family: 'Playfair Display', serif; font-size: clamp(1.4rem, 4vw, 2rem); }
+h3 { font-family: 'Playfair Display', serif; font-size: clamp(1.1rem, 3vw, 1.6rem); }
+h5 { font-size: clamp(0.95rem, 2vw, 1.1rem); }
+
+a { color: #c9a84c; }
+
+.navbar-bookshop {
+    background: #1a1a2e;
+    border-bottom: 3px solid #c9a84c;
+}
+.navbar-bookshop .navbar-brand {
+    font-family: 'Playfair Display', serif;
+    color: #c9a84c !important;
+    font-size: clamp(1rem, 2.5vw, 1.4rem);
+    text-decoration: none;
+}
+.navbar-bookshop .nav-link       { color: #e5e7eb !important; }
+.navbar-bookshop .nav-link:hover { color: #c9a84c !important; }
+
+.top-nav {
+    background: #1a1a2e;
+    border-bottom: 3px solid #c9a84c;
+    padding: 0.6rem 1.5rem;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.top-nav a {
+    font-family: 'Playfair Display', serif;
+    color: #c9a84c;
+    text-decoration: none;
+    font-size: clamp(1rem, 2.5vw, 1.4rem);
+}
+
+.role-badge {
+    font-size: 0.7rem;
+    font-weight: 600;
+    padding: 2px 8px;
+    border-radius: 20px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+.role-admin     { background: #7c3aed22; color: #7c3aed; border: 1px solid #7c3aed55; }
+.role-manager   { background: #0891b222; color: #0891b2; border: 1px solid #0891b255; }
+.role-moderator { background: #d9770622; color: #d97706; border: 1px solid #d9770655; }
+.role-customer  { background: #16a34a22; color: #16a34a; border: 1px solid #16a34a55; }
+
+.card { border-radius: 12px !important; border: none !important; }
+
+.btn-dark-gold {
+    background: #1a1a2e;
+    color: #c9a84c;
+    border: 2px solid #c9a84c;
+    font-weight: 600;
+}
+.btn-dark-gold:hover { background: #c9a84c; color: #1a1a2e; }
+
+.table th {
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    color: #6b7280;
+}
+
+img { max-width: 100%; }
+
+@media (max-width: 768px) {
+    .hide-mobile { display: none !important; }
+
+    .top-nav { padding: 0.5rem 1rem; }
+}
+
+@media (max-width: 576px) {
+    .table  { font-size: 0.82rem; }
+    .card   { padding: 1rem !important; }
+
+    .action-group { flex-direction: column !important; }
+    .action-group .btn { width: 100%; }
+}

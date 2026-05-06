@@ -1,0 +1,48 @@
+#advertisement {
+    background: linear-gradient(90deg, #1e1e2f, #2c3e50);
+    color: white;
+}
+
+#advertisement img {
+    max-width: 100%;
+    max-height: 400px;
+    border-radius: 8px;
+}
+
+#advertisement h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(1.8rem, 5vw, 3.5rem);
+}
+#advertisement h2 {
+    font-size: clamp(1.2rem, 3vw, 2rem);
+}
+#advertisement p.lead {
+    font-size: clamp(0.95rem, 2vw, 1.2rem);
+}
+
+.stats-section h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(1.3rem, 3.5vw, 2rem);
+}
+
+@media (max-width: 768px) {
+    #advertisement .hero-inner {
+        flex-direction: column;
+        text-align: center;
+        gap: 1.5rem;
+    }
+    #advertisement .hero-img,
+    #advertisement .hero-text {
+        width: 100%;
+    }
+    .jquery-buttons {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+}
+
+@media (max-width: 576px) {
+    .jquery-buttons .btn {
+        flex: 0 0 45%;
+    }
+}

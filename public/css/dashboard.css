@@ -1,0 +1,77 @@
+
+.stat-card {
+    text-align: center;
+    padding: 1rem;
+}
+.stat-card .stat-icon {
+    font-size: clamp(1.4rem, 3vw, 2rem);
+}
+.stat-card .stat-number {
+    font-size: clamp(1.5rem, 4vw, 2.2rem);
+    font-weight: 700;
+    line-height: 1.2;
+}
+.stat-card .stat-label {
+    font-size: 0.82rem;
+    color: #6b7280;
+    margin-top: 2px;
+}
+
+.book-thumb {
+    width: 40px;
+    max-width: 100%;
+    height: 55px;
+    object-fit: cover;
+    border-radius: 4px;
+}
+.book-thumb-placeholder {
+    width: 40px;
+    height: 55px;
+    background: #f3f4f6;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.1rem;
+}
+
+.book-card-cover {
+    width: 100%;
+    max-width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+.book-card-cover-placeholder {
+    height: 200px;
+    background: linear-gradient(135deg, #1a1a2e, #2c3e50);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 3.5rem;
+}
+
+.role-select-form { display: flex; gap: 0.25rem; align-items: center; }
+
+@media (max-width: 768px) {
+    .add-book-form > [class*="col-"] {
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+    .role-select-form { flex-direction: column; align-items: stretch; }
+    .role-select-form select { width: 100% !important; }
+}
+
+@media (max-width: 576px) {
+    .books-grid > [class*="col-"] {
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+    .book-card-cover { height: 240px; }
+}
+
+@media (min-width: 1400px) {
+    .books-grid > [class*="col-"] {
+        flex: 0 0 20%;
+        max-width: 20%;
+    }
+}
