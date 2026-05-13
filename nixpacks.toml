@@ -1,22 +1,15 @@
-[variables]
-PHP_VERSION = "8.2"
-
 [phases.setup]
-nixPkgs = ["php82", "php82Packages.composer", "postgresql"]
+nixPkgs = ["php82", "php82Extensions.mbstring", "php82Extensions.xml", "php82Extensions.tokenizer", "php82Extensions.pdo", "php82Extensions.pdo_mysql", "php82Extensions.fileinfo", "php82Extensions.openssl", "php82Extensions.curl", "php82Extensions.gd", "composer"]
 
 [phases.install]
-cmds = [
-    "composer install --no-interaction --no-scripts --no-autoloader --ignore-platform-reqs --prefer-dist",
-    "composer dump-autoload --optimize"
-]
+cmds = ["composer install --no-dev --optimize-autoloader"]
 
 [phases.build]
 cmds = [
-    "cp .env.example .env",
-    "php artisan key:generate --force",
-    "php artisan config:clear",
-    "php artisan view:clear"
+    "php artisan config:cache",
+    "php artisan route:cache",
+    "php artisan view:cache"
 ]
 
 [start]
-cmd = "php artisan migrate --force && php artisan storage:link && php artisan serve --host=0.0.0.0 --port=$PORT"
+cmd = "php artisan serve --host=0.0.0.0 --port=$PORT"
