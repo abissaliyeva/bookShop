@@ -12,8 +12,6 @@ nixPkgs = [
   "php83Extensions.gd",
   "php83Extensions.zip",
   "php83Extensions.bcmath",
-  "php83Extensions.ctype",
-  "php83Extensions.json",
   "php83Packages.composer"
 ]
 
