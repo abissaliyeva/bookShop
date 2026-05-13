@@ -1,25 +1,25 @@
 [phases.setup]
 nixPkgs = [
-  "php82",
-  "php82Extensions.mbstring",
-  "php82Extensions.xml",
-  "php82Extensions.tokenizer",
-  "php82Extensions.pdo",
-  "php82Extensions.pdo_mysql",
-  "php82Extensions.fileinfo",
-  "php82Extensions.openssl",
-  "php82Extensions.curl",
-  "php82Extensions.gd",
-  "php82Extensions.zip",
-  "php82Extensions.bcmath",
-  "php82Extensions.ctype",
-  "php82Extensions.json",
+  "php83",
+  "php83Extensions.mbstring",
+  "php83Extensions.xml",
+  "php83Extensions.tokenizer",
+  "php83Extensions.pdo",
+  "php83Extensions.pdo_mysql",
+  "php83Extensions.fileinfo",
+  "php83Extensions.openssl",
+  "php83Extensions.curl",
+  "php83Extensions.gd",
+  "php83Extensions.zip",
+  "php83Extensions.bcmath",
+  "php83Extensions.ctype",
+  "php83Extensions.json",
   "composer"
 ]
 
 [phases.install]
 cmds = [
-  "composer install --no-dev --optimize-autoloader --no-scripts --no-interaction --ignore-platform-reqs"
+  "composer install --no-dev --optimize-autoloader --no-scripts --no-interaction"
 ]
 
 [phases.build]
@@ -28,6 +28,9 @@ cmds = [
   "php artisan route:cache || true",
   "php artisan view:cache || true"
 ]
+
+[variables]
+SERVER_NAME = ":$PORT"
 
 [start]
 cmd = "php artisan migrate --force && php artisan serve --host=0.0.0.0 --port=$PORT"
